@@ -1,0 +1,28 @@
+{
+  "name": "surpaimb/laravel-baidu-aip",
+  "type": "library",
+  "description": "baidu aip for laravel",
+  "authors": [
+    {
+      "name": "surpaimb",
+      "email": "surpaimb@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "surpaimb/baidu-aip": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Surpaimb\\BaiduAip\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Surpaimb\\BaiduAip\\BaiduAipServiceProvider"
+      ]
+    }
+  }
+}
