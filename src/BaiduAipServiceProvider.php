@@ -3,6 +3,10 @@
 namespace Surpaimb\BaiduAip;
 
 use Illuminate\Support\ServiceProvider;
+use Surpaimb\Baidu\Aip\AipNlp;
+use Surpaimb\Baidu\Aip\AipOcr;
+use Surpaimb\Baidu\Aip\AipKg;
+use Surpaimb\Baidu\Aip\AipSpeech;
 
 class BaiduAipServiceProvider extends ServiceProvider
 {
@@ -37,10 +41,16 @@ class BaiduAipServiceProvider extends ServiceProvider
     {
         $this->setupConfig();
         $this->app->singleton('AipNlp', function () {
-            return new \Surpaimb\Baidu\Aip\AipNlp(config('baiduaip.appid'), config('baiduaip.appkey'), config('baiduaip.secretKey'));
+            return new AipNlp(config('baiduaip.appid'), config('baiduaip.appkey'), config('baiduaip.secretKey'));
         });
         $this->app->singleton('AipOcr', function () {
-            return new \Surpaimb\Baidu\Aip\AipOcr(config('baiduaip.appid'), config('baiduaip.appkey'), config('baiduaip.secretKey'));
+            return new AipOcr(config('baiduaip.appid'), config('baiduaip.appkey'), config('baiduaip.secretKey'));
+        });
+        $this->app->singleton('AipSpeech', function () {
+            return new AipSpeech(config('baiduaip.appid'), config('baiduaip.appkey'), config('baiduaip.secretKey'));
+        });
+        $this->app->singleton('AipKg', function () {
+            return new AipKg(config('baiduaip.appid'), config('baiduaip.appkey'), config('baiduaip.secretKey'));
         });
     }
 }
