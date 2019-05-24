@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": ">=7.0",
-    "surpaimb/baidu-aip": "^0.0.3"
+    "surpaimb/baidu-aip": "^0.0.4"
   },
   "autoload": {
     "psr-4": {
