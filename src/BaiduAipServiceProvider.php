@@ -3,10 +3,10 @@
 namespace Surpaimb\BaiduAip;
 
 use Illuminate\Support\ServiceProvider;
-use Surpaimb\Baidu\Aip\AipNlp;
-use Surpaimb\Baidu\Aip\AipOcr;
-use Surpaimb\Baidu\Aip\AipKg;
-use Surpaimb\Baidu\Aip\AipSpeech;
+use Baidu\Aip\AipNlp;
+use Baidu\Aip\AipOcr;
+use Baidu\Aip\AipKg;
+use Baidu\Aip\AipSpeech;
 
 class BaiduAipServiceProvider extends ServiceProvider
 {
